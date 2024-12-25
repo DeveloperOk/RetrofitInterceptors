@@ -13,6 +13,7 @@ class RetrofitNYTimes {
 
             val client = OkHttpClient.Builder()
                 .addInterceptor(NetworkInterceptor(context = context))
+                .addInterceptor(AuthInterceptor())
                 .build()
 
             return client
